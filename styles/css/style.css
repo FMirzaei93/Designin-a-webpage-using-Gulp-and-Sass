@@ -1,0 +1,148 @@
+/* General styles */
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #e0e1e5;
+}
+
+#container {
+    width: 802px;
+    margin: auto;
+    -webkit-box-shadow: 0px 0px 13px 4px #919191;
+    box-shadow: 0px 0px 13px 4px #919191;
+}
+
+
+/* Header Section */
+
+header {
+    background-color: #000;
+    height: 230px;
+    background-image: url(../../images/nuages.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul img.html-icon {
+    padding: 7px 0 0 7px;
+}
+
+header ul li {
+    margin-top: 30px;
+    vertical-align: top;
+    margin-left: 25px;
+    flex: 1;
+    /* flex: 1 means the following:
+
+flex-grow : 1;    ➜ The div will grow in same proportion as the window-size       
+flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size 
+flex-basis : 0;   ➜ The div does not have a starting value as such and will 
+                     take up screen as per the screen size available for
+                     e.g:- if 3 divs are in the wrapper then each div will take 33%. */
+}
+
+header ul li a {
+    text-decoration: none;
+    display: block;
+    /* in order to take the whole space as a block to be clickable in a box, even out of text.*/
+}
+
+header ul li span {
+    font-size: 16px;
+    color: #fb9f07;
+    font-family: Arial;
+    font-weight: normal;
+}
+
+header p {
+    font-size: 14px;
+    color: #e0e1e5;
+    font-family: Arial;
+    font-weight: lighter;
+}
+
+
+/* Main Section */
+
+#main-section {
+    background: #fff;
+    display: flex;
+}
+
+
+/* Left Side */
+
+article {
+    padding: 30px 50px 25px 50px;
+}
+
+article h1 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #000;
+    font-family: Verdana;
+    margin-top: 25px;
+}
+
+article p {
+    font-size: 11px;
+    line-height: 20px;
+    font-family: Verdana;
+    color: #000;
+    margin: 15px 0 25px 0;
+    padding-left: 40px;
+}
+
+
+/*Left Side-Footer */
+
+footer {
+    border-top: 1px solid #e0e0e0;
+    font-size: 9px;
+    font-family: Arial;
+    color: #000;
+    padding: 9px;
+}
+
+
+/* Right Side */
+
+aside {
+    height: 100%;
+    background: #FFB100;
+    background: -moz-linear-gradient(left, #FFB100 0%, #FC8700 100%);
+    background: -webkit-linear-gradient(left, #FFB100 0%, #FC8700 100%);
+    background: linear-gradient(to right, #FFB100 0%, #FC8700 100%);
+    min-width: 186px;
+}
+
+aside ul {
+    padding-top: 30px;
+    list-style: none;
+}
+
+aside ul li a {
+    font-size: 14px;
+    font-family: Arial;
+    padding: 8px 0px 8px 25px;
+    font-weight: normal;
+    text-decoration: none;
+    display: block;
+    color: #000;
+    margin-left: -5px;
+}
+
+aside ul li a:hover {
+    color: #e0e1e5;
+    background: #000;
+}

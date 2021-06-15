@@ -1,0 +1,11 @@
+// General styles
+$body-bkg-color:#e0e1e5;
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: $body-bkg-color;
+}

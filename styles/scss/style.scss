@@ -1,0 +1,135 @@
+// Variables
+$body-bkg-color:#e0e1e5;
+$black-color:#000;
+$white-color:#fff;
+$header-titles-color:#fb9f07;
+// $header-bkg-image-url:'http://127.0.0.1:8080/images/nuages.jpg';
+$header-bkg-image-url:'../../images/nuages.jpg';
+$container-width:802px;
+$header-height:230px;
+$aside-min-width:186px;
+// Functions
+@mixin container-box-shadow {
+    -webkit-box-shadow: 0px 0px 13px 4px #919191;
+    box-shadow: 0px 0px 13px 4px #919191;
+}
+
+@mixin aside-box-shadow {
+    background: #FFB100;
+    background: -moz-linear-gradient(left, #FFB100 0%, #FC8700 100%);
+    background: -webkit-linear-gradient(left, #FFB100 0%, #FC8700 100%);
+    background: linear-gradient(to right, #FFB100 0%, #FC8700 100%);
+}
+
+@mixin font-features($font-family, $font-size, $font-weight:normal) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+//Using another .scss file
+@import 'base';
+//Styles
+#container {
+    @include container-box-shadow();
+    width: $container-width;
+    margin: auto;
+}
+
+
+/* Header Section */
+
+header {
+    background-color: $black-color;
+    height: $header-height;
+    background-image: url($header-bkg-image-url);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    ul {
+        list-style: none;
+        display: flex;
+        img.html-icon {
+            padding: 7px 0 0 7px;
+        }
+        li {
+            margin-top: 30px;
+            vertical-align: top;
+            margin-left: 25px;
+            flex: 1;
+            a {
+                text-decoration: none;
+                display: block;
+            }
+            span {
+                @include font-features(Arial, 16px);
+                color: $header-titles-color;
+            }
+        }
+    }
+    p {
+        @include font-features(Arial, 14px, lighter);
+        color: $body-bkg-color;
+    }
+}
+
+
+/* Main Section */
+
+#main-section {
+    background: $white-color;
+    display: flex;
+}
+
+
+/* Left Side */
+
+article {
+    padding: 30px 50px 25px 50px;
+    h1 {
+        @include font-features(Verdana, 24px);
+        color: $black-color;
+        margin-top: 25px;
+    }
+    p {
+        @include font-features(Verdana, 11px);
+        line-height: 20px;
+        color: $black-color;
+        margin: 15px 0 25px 0;
+        padding-left: 40px;
+    }
+}
+
+
+/*Left Side-Footer */
+
+footer {
+    @include font-features(Arial, 9px);
+    border-top: 1px solid #e0e0e0;
+    color: $black-color;
+    padding: 9px;
+}
+
+
+/* Right Side */
+
+aside {
+    height: 100%;
+    @include aside-box-shadow();
+    min-width: $aside-min-width;
+    ul {
+        padding-top: 30px;
+        list-style: none;
+        li a {
+            @include font-features(Arial, 14px);
+            padding: 8px 0px 8px 25px;
+            text-decoration: none;
+            display: block;
+            color: $black-color;
+            margin-left: -5px;
+            &:hover {
+                color: $body-bkg-color;
+                background: $black-color;
+            }
+        }
+    }
+}
